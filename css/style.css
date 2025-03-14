@@ -1,0 +1,63 @@
+/*Estrutura - Layout*/
+
+/*Tipografia*/
+
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Cabeçalho*/
+#cabecalho {
+    background-color: #c5e3fe;
+    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0; /*colar no topo*/
+    left: 0; /*colar a esquerda*/
+    right: 0; /*colar a direita*/
+}
+
+.container {
+    width: 1145px;
+    margin: 0 auto;
+    padding: 1.4rem;
+    display: flex; /* Usar flexbox para alinhar o conteúdo horizontalmente */
+    justify-content: space-between; /* Espaço entre logo e menu */
+    align-items: center;
+}
+
+ul#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Transformar o menu em uma lista inline */
+}
+
+ul#menu li {
+    margin-left: 20px; /* Espaçamento entre os itens */
+}
+
+ul#menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+ul#menu li.destaque a {
+    color: white;
+    border-radius: 0.5rem;
+    background-color: black;
+    padding: 0.5rem;
+    margin: 0.2rem;
+}
+
+ul#menu li a:hover {
+    color: #4c799f;
+}
+
+ul#menu li.destaque a:hover {
+    color: #c5e3fe;
+}
+
+/*Àrea de destaque*/
