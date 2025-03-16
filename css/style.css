@@ -1,53 +1,48 @@
-/*### Estrutura - Layout ###*/
-body {
+/***************************************
+ Estrutura / Layout
+ */
+ body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-/*Cabeçalho*/
-#cabecalho {
+/*área cabeçalho*/
+#cabecalho{
     background-color: #c5e3fe;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     position: fixed;
-    top: 0; /*colar no topo*/
-    left: 0; /*colar a esquerda*/
-    right: 0; /*colar a direita*/
+    top: 0;
+    left: 0;
+    right: 0;
 }
-
+/*Configuração geral*/
 .container {
     width: 1145px;
     margin: 0 auto;
-    padding: 1.4rem;
-    display: flex; /* Usar flexbox para alinhar o conteúdo horizontalmente */
-    justify-content: space-between; /* Espaço entre logo e menu */
-    align-items: center;
+    padding: 1.4rem 0;
 }
-
+/*Ajustando menu*/
 ul#menu {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    display: flex; /* Transformar o menu em uma lista inline */
-}
-
-ul#menu li {
-    margin-left: 20px; /* Espaçamento entre os itens */
+	padding: 0;
+    width: 475px;
+    float: right;
 }
 
 ul#menu li a {
+    float: left;
     color: black;
     text-decoration: none;
+    padding: 0.5rem 1rem;
     font-size: 0.9rem;
 }
 
 ul#menu li.destaque a {
     color: white;
-    border-radius: 0.5rem;
+    border-radius: 1.2rem;
     background-color: black;
-    padding: 0.5rem;
-    margin: 0.2rem;
 }
-
+/*efeito ao passar o mouse*/
 ul#menu li a:hover {
     color: #4c799f;
 }
@@ -56,11 +51,11 @@ ul#menu li.destaque a:hover {
     color: #c5e3fe;
 }
 
-/*Àrea de destaque*/
-#destaque {
+/* Área de destaque */
+#destaque{
     background-color: #c5e3fe;
-    border-bottom: 2px solid black;
-    margin-top: 4.5rem;
+    border-bottom: 1px solid black;
+    margin-top: 4.7rem;
 }
 
 #area-destaque {
@@ -76,27 +71,98 @@ ul#menu li.destaque a:hover {
     font-size: 1rem;
     background-color: white;
 }
-/*imagem de fundo*/
+/*Logo cabeçalho*/
 .fundo-destaque {
     background: url(../img/fundo-topo.png) no-repeat right bottom;
     background-size: 22rem;
 }
 
+#tendencias {
+    padding-top: 0.8rem;
+}
+/*ajustando elementos flutuantes - pseudo-elemento*/
+#tendencias::after {
+    content: " ";
+    display: table; /*mais indicado a se utilizar*/
+    clear: both;
+}
+/*criação cards - caixas*/
+.item-tendencia {
+    width: 26%;
+    padding-left: 7%;
+    margin-bottom: 2rem;
+    position: relative; /*ítem pai da class "número" deve ter uma posição*/
+    float: left;
+}
+/*Configuração número cards - caixas*/
+.numero {
+    font-size: 3rem;
+    font-weight: bold;
+    color: lightgray;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
-/*###Tipografia###*/
-h1 {
+/*footer*/
+#rodape {
+    background-color: #c5e3fe;
+    border-top: 1px solid black;
+}
+
+/***************************************
+ tipografia 
+ */
+ h1 {
     font-size: 4rem;
     font-weight: 100;
     margin: 0;
     letter-spacing: -0.1rem;
-}
+ }
 
-h2 {
+ h2 {
     font-size: 0.8rem;
     text-transform: uppercase;
-}
+ }
 
 .titulo-tendencia {
     background: url(../img/icone-tendencia.png) no-repeat left / contain;
     padding: 0.2rem 0 0.2rem 2rem;
 }
+
+h3, h4 {
+    margin: 0.2rem;
+ }
+
+ h4{
+     font-weight: 100;
+ }
+
+ .icone {
+    padding-left: 1.5rem;
+}
+
+ .imagem1 {
+     background: url(../img/icone1.png) no-repeat left / contain;
+ }
+
+ .imagem2 {
+    background: url(../img/icone2.png) no-repeat left / contain;
+}
+
+.imagem3 {
+    background: url(../img/icone3.png) no-repeat left / contain;
+}
+
+.imagem4 {
+    background: url(../img/icone4.png) no-repeat left / contain;
+}
+
+.imagem5 {
+    background: url(../img/icone5.png) no-repeat left / contain;
+}
+
+.imagem6 {
+    background: url(../img/icone6.png) no-repeat left / contain;
+}
+
