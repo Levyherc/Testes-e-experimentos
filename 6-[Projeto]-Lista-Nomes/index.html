@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Define o tipo de codificação dos caracteres como UTF-8 -->
+    <meta charset="utf-8">
+    
+    <!-- Configura o viewport para tornar o layout responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Importa o CSS do Bootstrap 4.5.2 a partir de uma CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Importa o script JavaScript localizado na pasta js -->
+    <script type="text/javascript" src="./script.js" defer></script>
+
+    <!-- Define o título da página exibido na aba do navegador -->
+    <title>Projeto lista nomes</title>
+  </head>
+
+  <body>
+    
+    <!-- Container principal com margem superior -->
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-12">
+              
+              <!-- Título da seção -->
+              <h2>Usuários</h2>
+
+              <!-- Formulário em linha com campos de input e botões -->
+              <div class="form-inline">
+                
+                <!-- Campo de texto para digitar o nome a ser pesquisado -->
+                <input class="form-control mr-2" type="text" placeholder="Pesquise um nome" id="campoNome">
+
+                <!-- Botão para acionar a função de pesquisa de nome -->
+                <input  class="btn btn-primary mr-2" 
+                type="submit" value="Pesquisar"
+                onclick="pesquisarNome()">
+                
+                <!-- Botão para acionar a função que carrega todos os nomes -->
+                <input  class="btn btn-warning" 
+                type="submit" value="carregar"
+                onclick="carregarNomes()">
+              </div>
+
+              <!-- Linha horizontal para separação visual -->
+              <hr>
+
+              <!-- Lista onde os nomes serão exibidos dinamicamente -->
+              <ul class="list-group" id="lista">
+                <li class="list-group-item">Nenhum nome...</li>
+              </ul>
+
+          </div>
+        </div>
+      </div>
+
+  </body>
+
+</html>
